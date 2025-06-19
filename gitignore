@@ -1,0 +1,17 @@
+# React client
+client/node_modules/
+client/build/
+client/.env
+
+# C# server (ASP.NET Core)
+server/bin/
+server/obj/
+server/*.user
+server/*.vs/
+server/*.env
+
+# כללי
+.env
+.vscode/
+.DS_Store
+*.log
