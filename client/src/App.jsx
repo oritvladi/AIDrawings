@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function renderShape(shape, i) {
-  console.log(shape);
-
+  if (!shape || !shape.type) return null;
   const { type, x, y, width, height, color } = shape;
 
   switch (type) {
@@ -132,7 +131,6 @@ export default function App() {
               isLoaded: true,
             };
           }));
-          console.log("Loaded canvas");
         } catch {
           alert("Communication error with the server");
         } finally {
