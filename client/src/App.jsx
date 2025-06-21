@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function renderShape(shape, i) {
+  console.log(shape);
+
   const { type, x, y, width, height, color } = shape;
 
   switch (type) {
@@ -25,7 +27,7 @@ function renderShape(shape, i) {
           x={x}
           y={y}
           width={width}
-          height={width} // width = height
+          height={width}
           fill={color}
           stroke={color}
         />
@@ -35,10 +37,10 @@ function renderShape(shape, i) {
       return (
         <ellipse
           key={i}
-          cx={x}               // center x
-          cy={y}               // center y
-          rx={width / 2}       // radius x
-          ry={width / 2}       // radius y = same as rx
+          cx={x}
+          cy={y}
+          rx={width / 2}
+          ry={width / 2}
           fill={color}
           stroke={color}
         />
@@ -48,8 +50,8 @@ function renderShape(shape, i) {
       return (
         <ellipse
           key={i}
-          cx={x}               // center x
-          cy={y}               // center y
+          cx={x}
+          cy={y}
           rx={width / 2}
           ry={height / 2}
           fill={color}
@@ -75,9 +77,9 @@ function renderShape(shape, i) {
         <polygon
           key={i}
           points={`
-            ${x + width / 2},${y}               // top center
-            ${x},${y + height}                  // bottom left
-            ${x + width},${y + height}          // bottom right
+            ${x + width / 2},${y}              
+            ${x},${y + height}                  
+            ${x + width},${y + height}         
           `}
           fill={color}
           stroke={color}
